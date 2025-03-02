@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сканирование QR-кода</title>
+    <script>
+        // Функция перенаправления на Google Apps Script с уникальным параметром
+        function redirectToScript() {
+            var now = new Date();
+            var uniqueParam = now.getTime(); // Уникальный параметр для предотвращения кэширования
+
+            // Строим URL для Google Apps Script с параметром уникального времени
+            var scriptUrl = "https://script.google.com/macros/s/ВАШ_СКРИПТ_ID/exec?timestamp=" + uniqueParam;
+
+            // Перенаправляем на Google Apps Script
+            window.location.href = scriptUrl;
+        }
+
+        window.onload = redirectToScript;
+    </script>
+</head>
+<body>
+    <p>Перенаправление...</p>
+</body>
+</html>
+
